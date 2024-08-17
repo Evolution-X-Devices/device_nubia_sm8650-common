@@ -269,7 +269,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # QMI
 PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti_vendor
 
 # QSPA
 PRODUCT_PACKAGES += \
