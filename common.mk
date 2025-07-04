@@ -134,6 +134,8 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.sm8650)
 
+TARGET_HAS_UDFPS := true
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
