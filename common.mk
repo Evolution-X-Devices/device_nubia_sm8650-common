@@ -298,7 +298,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.caza \
+    sensors.sm8650 \
     android.hardware.sensors-service.multihal
 
 PRODUCT_COPY_FILES += \
