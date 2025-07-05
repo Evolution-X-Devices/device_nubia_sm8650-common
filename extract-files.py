@@ -19,7 +19,6 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/nubia/caza',
     'hardware/qcom-caf/sm8650',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/commonsys/display',
@@ -189,7 +188,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'caza',
+    'sm8650-common',
     'nubia',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
