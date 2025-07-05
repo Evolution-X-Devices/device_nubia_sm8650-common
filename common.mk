@@ -135,9 +135,9 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.caza
+    android.hardware.biometrics.fingerprint-service.sm8650
 
-$(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.caza)
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.sm8650)
 
 # Health
 PRODUCT_PACKAGES += \
