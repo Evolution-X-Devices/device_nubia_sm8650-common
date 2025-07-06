@@ -255,13 +255,11 @@ vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.zte.node.aipreprocess.so
 vendor/lib64/camera/components/com.zte.node.capturebokeh.so
-vendor/lib64/camera/components/com.zte.node.mcxrealtimepostprocess.so
 vendor/lib64/camera/components/com.zte.node.motiondetect.so
 vendor/lib64/camera/components/com.zte.node.realtimebokeh.so
 vendor/lib64/camera/components/com.zte.node.realtimedefog.so
 vendor/lib64/camera/components/com.zte.node.sharpnessdetect.so
 vendor/lib64/camera/components/com.zte.node.supres.so
-vendor/lib64/camera/components/libcamxevainterface.so
 vendor/lib64/camera/components/libdepthmapwrapper_itof.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
@@ -273,43 +271,12 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigsecure.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/com.qti.chi.offline.so
 vendor/lib64/camx.device-impl.so
 vendor/lib64/camx.provider-impl.so
-vendor/lib64/com.qti.camx.chiiqutils.so
-vendor/lib64/com.qti.chiusecaseselector.so
-vendor/lib64/com.qti.feature2.afbrckt.so
-vendor/lib64/com.qti.feature2.anchorsync.so
-vendor/lib64/com.qti.feature2.demux.so
-vendor/lib64/com.qti.feature2.derivedoffline.so
-vendor/lib64/com.qti.feature2.generic.so
-vendor/lib64/com.qti.feature2.gs.sm8650.so
-vendor/lib64/com.qti.feature2.hdr.so
-vendor/lib64/com.qti.feature2.mcreprocrt.so
-vendor/lib64/com.qti.feature2.memcpy.so
-vendor/lib64/com.qti.feature2.metadataserializer.so
-vendor/lib64/com.qti.feature2.mfsr.so
-vendor/lib64/com.qti.feature2.ml.so
-vendor/lib64/com.qti.feature2.mux.so
-vendor/lib64/com.qti.feature2.qcfa.so
-vendor/lib64/com.qti.feature2.rawhdr.so
-vendor/lib64/com.qti.feature2.realtimeserializer.so
-vendor/lib64/com.qti.feature2.rt.so
-vendor/lib64/com.qti.feature2.rtmcx.so
-vendor/lib64/com.qti.feature2.serializer.so
-vendor/lib64/com.qti.feature2.statsregeneration.so
-vendor/lib64/com.qti.feature2.stub.so
-vendor/lib64/com.qti.feature2.supres.so
-vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8650.so
 vendor/lib64/com.qti.stats.common.so
-vendor/lib64/com.qualcomm.mcx.distortionmapper.so
-vendor/lib64/com.qualcomm.mcx.linearmapper.so
-vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
-vendor/lib64/com.qualcomm.mcx.policy.mfl.so
-vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/libadaptive_shutter.so
 vendor/lib64/libaicudnativeprocessclient.so
 vendor/lib64/libainativeprocessclient.so
@@ -320,7 +287,6 @@ vendor/lib64/libarcsoft_facialrestoration.so
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libc++_shared.so
-vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamxcommonutils.so
 vendor/lib64/libcamxdefog.so
 vendor/lib64/libcamxexternalformatutils.so
@@ -328,7 +294,6 @@ vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxhwnodecontext.so
 vendor/lib64/libcamxifestriping.so
 vendor/lib64/libcamximageformatutils.so
-vendor/lib64/libcamxncsdatafactory.so
 vendor/lib64/libcamxqsatalgo.so
 vendor/lib64/libcamxsettingsmanager.so
 vendor/lib64/libcamxstatscore.so
@@ -1018,7 +983,6 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.gf95xx.default.so;FIX_SONAME
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.so
 
 # Gatekeeper
