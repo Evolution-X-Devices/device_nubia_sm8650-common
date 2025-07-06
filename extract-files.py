@@ -75,14 +75,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()
         .remove_needed('android.hardware.graphics.allocator-V1-ndk.so'),
     (
-        'vendor/lib64/camera/com.qti.ois.ois_dw9781_cerro_ov64b40.so',
-        'vendor/lib64/camera/com.qti.ois.ois_dw9784_cerro_imx800.so',
-        'vendor/lib64/camera/com.qti.ois.ois_dw9784_cerro_imx906.so',
-        'vendor/lib64/camera/com.qti.ois.ois_dw9784_cerro_ov50e40.so',
-        'vendor/lib64/camera/com.zte.sensor.imx800_cerro.so',
-        'vendor/lib64/camera/com.zte.sensor.imx906_cerro.so',
-        'vendor/lib64/camera/com.zte.sensor.ov50e40_cerro.so',
-        'vendor/lib64/camera/com.zte.sensor.ov64b40_cerro.so',
         'vendor/lib64/camera/components/com.qti.node.aon.so',
         'vendor/lib64/camera/components/com.qti.node.depth.so',
         'vendor/lib64/camera/components/com.qti.node.depthprovider.so',
@@ -112,7 +104,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/com.qti.feature2.anchorsync.so',
         'vendor/lib64/com.qti.feature2.demux.so',
         'vendor/lib64/com.qti.feature2.derivedoffline.so',
-        'vendor/lib64/com.qti.feature2.fusion.so',
         'vendor/lib64/com.qti.feature2.generic.so',
         'vendor/lib64/com.qti.feature2.gs.sm8650.so',
         'vendor/lib64/com.qti.feature2.hdr.so',
@@ -138,15 +129,12 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so',
         'vendor/lib64/com.qualcomm.mcx.policy.mfl.so',
         'vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so',
-        'vendor/lib64/hw/camera.qcom.sm8650.so',
-        'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/hw/com.qti.chi.offline.so',
         'vendor/lib64/hw/com.qti.chi.override.so',
         'vendor/lib64/libcamerapostproc.so',
         'vendor/lib64/libcamxhwnodecontext.so',
         'vendor/lib64/libcamxifestriping.so',
         'vendor/lib64/libcamxncsdatafactory.so',
-        'vendor/lib64/libchifeature2.so',
         'vendor/lib64/libcommonchiutils.so',
         'vendor/lib64/libipebpsstriping.so',
         'vendor/lib64/libipebpsstriping170.so',
@@ -174,11 +162,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/libril-db.so': blob_fixup()
         .binary_regex_replace(rb'persist\.vendor\.radio\.poweron_opt', rb'persist.vendor.radio.poweron_ign'),
-    'system/priv-app/NubiaCamera/NubiaCamera.apk': blob_fixup().apktool_patch(
-        'nubia-camera-patches'
-    ),
-    'vendor/lib64/hw/sensors.hal.tof.so': blob_fixup()
-        .binary_regex_replace(b'\x00input\x00', b'\x00fakei\x00'),
     'vendor/lib64/libNubiaImageAlgorithmVD.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')

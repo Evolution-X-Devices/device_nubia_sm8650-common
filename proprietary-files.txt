@@ -39,8 +39,6 @@ vendor/etc/acdbdata/nn_ns_models/fai__8.0.2_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_3.4_enpuv4.pmd
-vendor/etc/acdbdata/pineapple_mtp/MTP_acdb_cal.acdb
-vendor/etc/acdbdata/pineapple_mtp/MTP_workspaceFileXml.qwsp
 
 # ADSP
 vendor/bin/adsprpcd
@@ -171,10 +169,8 @@ system_ext/framework/vendor.zte.hardware.camera.transferclient.jar
 system/etc/permissions/com.android.camera.xml
 system/etc/pictureclassifier/CameraLabelGroups
 system/etc/pictureclassifier/LabelGroups
-system/etc/pictureclassifier/MultiScenePictureClassifier.tflite
 system/etc/pictureclassifier/PictureClassifier.tflite
 system/etc/pictureclassifier/PictureLabels
-system/priv-app/NubiaCamera/NubiaCamera.apk
 
 # Camera provider
 vendor/bin/hw/vendor.qti.camera.provider-service_64
@@ -233,10 +229,8 @@ vendor/lib64/camera/components/com.qti.node.swpdpc.so
 vendor/lib64/camera/components/com.qti.node.swpreprocess.so
 vendor/lib64/camera/components/com.qti.node.swregistration.so
 vendor/lib64/camera/components/com.qti.node.swvrt.so
-vendor/lib64/camera/components/com.qti.stats.aec.so
 vendor/lib64/camera/components/com.qti.stats.aecwrapper.so
 vendor/lib64/camera/components/com.qti.stats.aecxcore.so
-vendor/lib64/camera/components/com.qti.stats.af.so
 vendor/lib64/camera/components/com.qti.stats.afc.so
 vendor/lib64/camera/components/com.qti.stats.afd.so
 vendor/lib64/camera/components/com.qti.stats.afwrapper.so
@@ -259,20 +253,12 @@ vendor/lib64/camera/components/com.qtistatic.stats.aec.so
 vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib64/camera/components/com.zte.node.aicud.so
 vendor/lib64/camera/components/com.zte.node.aipreprocess.so
 vendor/lib64/camera/components/com.zte.node.capturebokeh.so
-vendor/lib64/camera/components/com.zte.node.capturepostprocess.so
-vendor/lib64/camera/components/com.zte.node.capturereprocess.so
-vendor/lib64/camera/components/com.zte.node.capturescale.so
 vendor/lib64/camera/components/com.zte.node.mcxrealtimepostprocess.so
 vendor/lib64/camera/components/com.zte.node.motiondetect.so
-vendor/lib64/camera/components/com.zte.node.rawsvq.so
 vendor/lib64/camera/components/com.zte.node.realtimebokeh.so
 vendor/lib64/camera/components/com.zte.node.realtimedefog.so
-vendor/lib64/camera/components/com.zte.node.realtimepostprocess.so
-vendor/lib64/camera/components/com.zte.node.sat.so
-vendor/lib64/camera/components/com.zte.node.satpostprocess.so
 vendor/lib64/camera/components/com.zte.node.sharpnessdetect.so
 vendor/lib64/camera/components/com.zte.node.supres.so
 vendor/lib64/camera/components/libcamxevainterface.so
@@ -281,40 +267,13 @@ vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
 # Camera
 vendor/lib64/camera/bitmlconfig.bin
-vendor/lib64/camera/com.qti.ois.ois_dw9781_cerro_ov64b40.so
-vendor/lib64/camera/com.qti.ois.ois_dw9784_cerro_imx800.so
-vendor/lib64/camera/com.qti.ois.ois_dw9784_cerro_imx906.so
-vendor/lib64/camera/com.qti.ois.ois_dw9784_cerro_ov50e40.so
 vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.zte.eeprom.imx800_cerro.so
-vendor/lib64/camera/com.zte.eeprom.imx906_cerro.so
-vendor/lib64/camera/com.zte.eeprom.ov12d2q_cerro.so
-vendor/lib64/camera/com.zte.eeprom.ov50e40_cerro.so
-vendor/lib64/camera/com.zte.eeprom.ov64b40_cerro.so
-vendor/lib64/camera/com.zte.sensor.imx800_cerro.so
-vendor/lib64/camera/com.zte.sensor.imx906_cerro.so
-vendor/lib64/camera/com.zte.sensor.ov12d2q_cerro.so
-vendor/lib64/camera/com.zte.sensor.ov50e40_cerro.so
-vendor/lib64/camera/com.zte.sensor.ov64b40_cerro.so
-vendor/lib64/camera/com.zte.sensormodule.zte_imx800_cerro.bin
-vendor/lib64/camera/com.zte.sensormodule.zte_imx906_cerro.bin
-vendor/lib64/camera/com.zte.sensormodule.zte_ov12d2q_cerro.bin
-vendor/lib64/camera/com.zte.sensormodule.zte_ov50e40_cerro.bin
-vendor/lib64/camera/com.zte.sensormodule.zte_ov64b40_cerro.bin
-vendor/lib64/camera/com.zte.tuned.zte_imx800_cerro.bin
-vendor/lib64/camera/com.zte.tuned.zte_imx906_cerro.bin
-vendor/lib64/camera/com.zte.tuned.zte_ov12d2q_cerro.bin
-vendor/lib64/camera/com.zte.tuned.zte_ov50e40_cerro.bin
-vendor/lib64/camera/com.zte.tuned.zte_ov64b40_cerro.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigsecure.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/camera.qcom.sm8650.so
-vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.offline.so
-vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/camx.device-impl.so
 vendor/lib64/camx.provider-impl.so
 vendor/lib64/com.qti.camx.chiiqutils.so
@@ -323,7 +282,6 @@ vendor/lib64/com.qti.feature2.afbrckt.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
 vendor/lib64/com.qti.feature2.derivedoffline.so
-vendor/lib64/com.qti.feature2.fusion.so
 vendor/lib64/com.qti.feature2.generic.so
 vendor/lib64/com.qti.feature2.gs.sm8650.so
 vendor/lib64/com.qti.feature2.hdr.so
@@ -359,20 +317,12 @@ vendor/lib64/libarcsoft_beautyshot_high.so
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
 vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_facialrestoration.so
-vendor/lib64/libarcsoft_hp_detection.so
-vendor/lib64/libarcsoft_picselfie.so
 vendor/lib64/libarcsoft_portrait_distortion_correction.so
-vendor/lib64/libarcsoft_qnnhtp.so
-vendor/lib64/libarcsoft_scbokeh_image.so
-vendor/lib64/libarcsoft_scbokeh_video.so
-vendor/lib64/libarcsoft_superportrait.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamxarcskinbeautiful.so
 vendor/lib64/libcamxcommonutils.so
 vendor/lib64/libcamxdefog.so
-vendor/lib64/libcamxdepthbokeharc.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxhwnodecontext.so
@@ -380,18 +330,12 @@ vendor/lib64/libcamxifestriping.so
 vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxncsdatafactory.so
 vendor/lib64/libcamxqsatalgo.so
-vendor/lib64/libcamxremovefringer.so
-vendor/lib64/libcamxselfiebokeharc.so
 vendor/lib64/libcamxsettingsmanager.so
-vendor/lib64/libcamxskytone.so
 vendor/lib64/libcamxstatscore.so
-vendor/lib64/libcamxsuperres.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcamxudceffectenhance.so
-vendor/lib64/libcamxwidelencalc.so
-vendor/lib64/libchifeature2.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.nubia.chinodenubiautils.so
 vendor/lib64/libcom.qti.chinodeutils.so
@@ -425,32 +369,20 @@ vendor/lib64/libQnnHtpNetRunExtensions.so
 vendor/lib64/libQnnHtpPrepare.so
 vendor/lib64/libQnnHtpProfilingReader.so
 vendor/lib64/libQnnHtpV75.so
-vendor/lib64/libQnnHtpV75CalculatorStub.so
 vendor/lib64/libQnnHtpV75Stub.so
-vendor/lib64/libQnnJsonProfilingReader.so
 vendor/lib64/libQnnSaver.so
 vendor/lib64/libQnnSystem.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqshcamera.so
-vendor/lib64/librmca.so
 vendor/lib64/libskia.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libsky_cls_320.so
-vendor/lib64/libsky_seg_320.so
-vendor/lib64/libsky_seg_toning_320.so
-vendor/lib64/libsr_x1_272_272_12.so
-vendor/lib64/libsr_x2_272_272_12.so
-vendor/lib64/libsr_x4_272_272_12.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtensorflowlite_gpu_jni.so
 vendor/lib64/libtensorflowlite_jni.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libtflite_model_bnudc.so
 vendor/lib64/libtflite_model_denoised_528_528.so
 vendor/lib64/libtflite_model_denoised_608_608.so
-vendor/lib64/libtflite_model_depurple_544_544.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libVNSDenoise.so;FIX_SONAME
-vendor/lib64/libVNSInterface.so
-vendor/lib64/libyuv_sr.so
 vendor/lib64/libyuv_udc.so
 vendor/lib64/libzcv.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
@@ -459,10 +391,6 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.zte.hardware.camera.transfer-V1-ndk.so
 
 # Camera configs
-vendor/etc/camera/adaptive_config/mfnr_network_denoise_config.xml
-vendor/etc/camera/beautiful_app/preference_beautify0.json
-vendor/etc/camera/beautiful_app/preference_beautify1.json
-vendor/etc/camera/beautiful_app/preference_beautify2.json
 vendor/etc/camera/beautiful_app/preference_beautify3.json
 vendor/etc/camera/camera_family_resources/family_demo_elecfnovideo.mp4
 vendor/etc/camera/camera_family_resources/family_demo_freezevideo.mp4
@@ -555,7 +483,6 @@ vendor/etc/camera/constellation/Umi.png
 vendor/etc/camera/constellation/Vir.png
 vendor/etc/camera/constellation/Vol.png
 vendor/etc/camera/constellation/Vul.png
-vendor/etc/camera/debug/camxoverridesettings.txt
 vendor/etc/camera/fonts/NotoColorEmoji.ttf
 vendor/etc/camera/fonts/Roboto-Medium.ttf
 vendor/etc/camera/fonts/ZTEZhengYuan-55S.ttf
@@ -651,10 +578,6 @@ vendor/etc/camera/icon/sucai0.png
 vendor/etc/camera/icon/sucai0_r.png
 vendor/etc/camera/icon/v_mirror_fs.c
 vendor/etc/camera/icon/vignette.png
-vendor/etc/camera/icon/water_mark_drawable_black.argb
-vendor/etc/camera/icon/water_mark_drawable_black_eng.argb
-vendor/etc/camera/icon/water_mark_drawable_white.argb
-vendor/etc/camera/icon/water_mark_drawable_white_eng.argb
 vendor/etc/camera/icon/water_mark_v1a_drawable_black.argb
 vendor/etc/camera/icon/water_mark_v1a_drawable_black_eng.argb
 vendor/etc/camera/icon/water_mark_v1a_drawable_white.argb
@@ -701,32 +624,16 @@ vendor/etc/camera/vlog_app/vlog_demo_reverse.mp4
 vendor/etc/camera/vlog_app/vlog_demo_slowmotion.mp4
 vendor/etc/camera/vlog_app/vlog_demo_soothing.mp4
 vendor/etc/camera/VNSConfig.xml
-vendor/etc/camera/VNSConfig_4k.xml
-vendor/etc/camera/VNSQnnBinary.bin
-vendor/etc/camera/adaptive_shutter_config.xml
-vendor/etc/camera/adaptive_shutter_config_moon.xml
-vendor/etc/camera/adaptive_shutter_config_night.xml
-vendor/etc/camera/adaptive_shutter_config_renwen.xml
 vendor/etc/camera/blush_gloss_lut.cng
 vendor/etc/camera/cameraaiconfig
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/defg_data.txt
-vendor/etc/camera/dualcam_cali.bin
-vendor/etc/camera/eisoverridesettings.txt
 vendor/etc/camera/fonts.xml
-vendor/etc/camera/mfnr_network_denoise_config.xml
-vendor/etc/camera/mfnr_network_denoise_config_moon.xml
-vendor/etc/camera/mfnr_network_denoise_config_night.xml
-vendor/etc/camera/mfnr_network_denoise_config_renwen.xml
 vendor/etc/camera/mfnr_network_denoise_config_underdisplay.xml
 vendor/etc/camera/remosaic_cali_ov16a1q.bin
 vendor/etc/camera/remosaic_cali_s5kjn1sq03.bin
 vendor/etc/camera/sat_config.xml
-vendor/etc/camera/sr_x1_272_272_12Binary.bin
-vendor/etc/camera/sr_x2_272_272_12Binary.bin
-vendor/etc/camera/sr_x4_272_272_12Binary.bin
 vendor/etc/camera/udc_512_512_12Binary.bin
-vendor/etc/camera/widelencalc_cali.bin
 
 # Camera firmware
 vendor/lib64/bm4a68v08s12n52.bin
@@ -799,17 +706,8 @@ vendor/firmware/CAMERA_ICP.b16
 vendor/firmware/CAMERA_ICP.b17
 vendor/firmware/CAMERA_ICP.b18
 vendor/firmware/CAMERA_ICP.b19
-vendor/firmware/CAMERA_ICP.b20
 vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/CAMERA_ICP.mbn
-vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
-
-# Camera OIS firmware
-vendor/firmware/ois_dw9781_cerro_ov64b40.prog
-vendor/firmware/ois_dw9784_cerro_imx800.prog
-vendor/firmware/ois_dw9784_cerro_imx906.prog
-vendor/firmware/ois_dw9784_cerro_ov50e40.prog
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -1114,9 +1012,6 @@ vendor/firmware/evass.b15
 vendor/firmware/evass.b16
 vendor/firmware/evass.b17
 vendor/firmware/evass.b18
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
 
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
@@ -1124,14 +1019,7 @@ vendor/lib64/libfastcvopt.so
 
 # Fingerprint
 vendor/lib64/hw/fingerprint.gf95xx.default.so;FIX_SONAME
-vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.so
-
-# Firmware
-vendor/firmware/aw882xx_acf.bin
-vendor/firmware/goodix_cfg_group_9916r.bin
-vendor/firmware/goodix_firmware_9916r.bin
-vendor/firmware/haptic_ram.bin
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper-service-qti
@@ -1162,7 +1050,6 @@ vendor/lib64/libllvm-qgl.so
 # Graphics (Adreno firmware)
 vendor/firmware/gen70900_aqe.fw
 vendor/firmware/gen70900_sqe.fw
-vendor/firmware/gen70900_zap.mbn
 vendor/firmware/gmu_gen70900.bin
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
@@ -1240,7 +1127,6 @@ vendor/lib64/vendor.qti.gnss-service.so
 vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/gnss_antenna_info.conf
-vendor/etc/gps.conf
 vendor/etc/izat.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
@@ -1389,7 +1275,6 @@ vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_performance_pineapple_vendor.xml:vendor/etc/media_codecs_performance_pineapple.xml
 vendor/etc/media_codecs_pineapple_vendor.xml:vendor/etc/media_codecs_pineapple.xml
 vendor/etc/media_codecs_vendor_audio.xml
-vendor/etc/media_profiles_pineapple.xml
 
 # Media
 system_ext/lib64/libmmosal.so
@@ -1443,11 +1328,6 @@ vendor/lib64/libvmmem.so
 
 # Native public libraries
 vendor/etc/public.libraries.txt
-
-# NFC configs
-vendor/etc/libnfc-hal-st.conf
-vendor/etc/libnfc-nci.conf
-vendor/etc/st54l_conf.txt
 
 # NFC firmware
 vendor/firmware/st54l_fw.bin
@@ -1799,11 +1679,6 @@ vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
 
-# Secure element
-vendor/bin/hw/android.hardware.secure_element-service-aidl
-vendor/etc/init/android.hardware.secure_element.rc
-vendor/etc/vintf/manifest/android.hardware.secure_element.xml
-
 # Secure Processor
 vendor/bin/hw/vendor.qti.hardware.secureprocessor
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
@@ -1844,7 +1719,6 @@ vendor/etc/init/vendor.qsap.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/seccomp_policy/qsap_sensors.policy
-vendor/lib64/hw/sensors.hal.tof.so
 vendor/lib64/libSensorsInterface.so
 vendor/lib64/libqsh.so
 vendor/lib64/libsensor_calibration.so
@@ -1860,27 +1734,16 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.qsh.so
 
 # Sensors configs
-vendor/etc/sensors/config/json.lst
-vendor/etc/sensors/config/lanai_ak991x_0.json
 vendor/etc/sensors/config/lanai_akmlib.json
-vendor/etc/sensors/config/lanai_aw96103_0_sar_register_a.json
-vendor/etc/sensors/config/lanai_aw96103_0_sar_register_b.json
-vendor/etc/sensors/config/lanai_aw96103_0_sar_register_c.json
-vendor/etc/sensors/config/lanai_aw9610x_0.json
 vendor/etc/sensors/config/lanai_default_sensors.json
 vendor/etc/sensors/config/lanai_dynamic_sensors.json
 vendor/etc/sensors/config/lanai_dynamic_sensors_template.json
-vendor/etc/sensors/config/lanai_fcal_ak991x_0.json
 vendor/etc/sensors/config/lanai_irq.json
-vendor/etc/sensors/config/lanai_lsm6dso_0.json
-vendor/etc/sensors/config/lanai_mtp_ak991x_0.json
 vendor/etc/sensors/config/lanai_power_0.json
 vendor/etc/sensors/config/lanai_qsh_ble_0.json
 vendor/etc/sensors/config/lanai_stk3a7x_0.json
-vendor/etc/sensors/config/lanai_stk3b6x_0.json
 vendor/etc/sensors/config/qsh_ble.json
 vendor/etc/sensors/config/qsh_camera_common.json
 vendor/etc/sensors/config/qsh_camera_imx688_4.json
@@ -1977,7 +1840,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # VPU firmware
-vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
 
 # UBWCP
