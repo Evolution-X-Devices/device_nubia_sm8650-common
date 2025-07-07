@@ -91,6 +91,9 @@ vendor/lib64/rfs/dsp/libworker_pool.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
+# libmcs depends on libagm, which is a gnu makefile target
+# libqtigefar depends on libar-pal, which is a gnu makefile target
+# libvui_intf depends on liblx-osal, which is a gnu makefile target
 vendor/bin/qsap_voiceui
 vendor/etc/seccomp_policy/qsap_voiceui.policy
 vendor/lib64/libAlacSwDec.so
@@ -107,14 +110,11 @@ vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
-# libmcs depends on libagm, which is a gnu makefile target
 vendor/lib64/libmcs.so;DISABLE_CHECKELF
-# libqtigefar depends on libar-pal, which is a gnu makefile target
 vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
-# libvui_intf depends on liblx-osal, which is a gnu makefile target
 vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
@@ -126,8 +126,8 @@ vendor/etc/models/acd/speech.eai
 
 # Audio FX modules
 vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libquasar.so
+vendor/lib64/soundfx/libshoebox.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
@@ -164,13 +164,13 @@ vendor/lib64/libjnihelper.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
 # Camera app
-system_ext/etc/permissions/vendor.zte.hardware.camera.transferclient.xml
-system_ext/framework/vendor.zte.hardware.camera.transferclient.jar
 system/etc/permissions/com.android.camera.xml
 system/etc/pictureclassifier/CameraLabelGroups
 system/etc/pictureclassifier/LabelGroups
 system/etc/pictureclassifier/PictureClassifier.tflite
 system/etc/pictureclassifier/PictureLabels
+system_ext/etc/permissions/vendor.zte.hardware.camera.transferclient.xml
+system_ext/framework/vendor.zte.hardware.camera.transferclient.jar
 
 # Camera provider
 vendor/bin/hw/vendor.qti.camera.provider-service_64
@@ -277,6 +277,16 @@ vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8650.so
 vendor/lib64/com.qti.stats.common.so
+vendor/lib64/libNubiaImageAlgorithmVD.so
+vendor/lib64/libQnnHtp.so
+vendor/lib64/libQnnHtpNetRunExtensions.so
+vendor/lib64/libQnnHtpPrepare.so
+vendor/lib64/libQnnHtpProfilingReader.so
+vendor/lib64/libQnnHtpV75.so
+vendor/lib64/libQnnHtpV75Stub.so
+vendor/lib64/libQnnSaver.so
+vendor/lib64/libQnnSystem.so
+vendor/lib64/libVNSDenoise.so;FIX_SONAME
 vendor/lib64/libadaptive_shutter.so
 vendor/lib64/libaicudnativeprocessclient.so
 vendor/lib64/libainativeprocessclient.so
@@ -315,28 +325,19 @@ vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libisphwsetting.so
 vendor/lib64/libmcxcroputil.so
+vendor/lib64/libmfnr_network.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
-vendor/lib64/libmfnr_network.so
 vendor/lib64/libmpbase.so
-vendor/lib64/libNubiaImageAlgorithmVD.so
 vendor/lib64/libomp.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopticalzoomfallback.so
 vendor/lib64/libos.so
-vendor/lib64/libQnnHtp.so
-vendor/lib64/libQnnHtpNetRunExtensions.so
-vendor/lib64/libQnnHtpPrepare.so
-vendor/lib64/libQnnHtpProfilingReader.so
-vendor/lib64/libQnnHtpV75.so
-vendor/lib64/libQnnHtpV75Stub.so
-vendor/lib64/libQnnSaver.so
-vendor/lib64/libQnnSystem.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libskia.so;MODULE_SUFFIX=_vendor
@@ -347,7 +348,6 @@ vendor/lib64/libtflite_model_bnudc.so
 vendor/lib64/libtflite_model_denoised_528_528.so
 vendor/lib64/libtflite_model_denoised_608_608.so
 vendor/lib64/libthreadutils.so
-vendor/lib64/libVNSDenoise.so;FIX_SONAME
 vendor/lib64/libyuv_udc.so
 vendor/lib64/libzcv.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
@@ -601,6 +601,28 @@ vendor/etc/camera/sat_config.xml
 vendor/etc/camera/udc_512_512_12Binary.bin
 
 # Camera firmware
+vendor/firmware/CAMERA_ICP.b00
+vendor/firmware/CAMERA_ICP.b01
+vendor/firmware/CAMERA_ICP.b02
+vendor/firmware/CAMERA_ICP.b03
+vendor/firmware/CAMERA_ICP.b04
+vendor/firmware/CAMERA_ICP.b05
+vendor/firmware/CAMERA_ICP.b06
+vendor/firmware/CAMERA_ICP.b07
+vendor/firmware/CAMERA_ICP.b08
+vendor/firmware/CAMERA_ICP.b09
+vendor/firmware/CAMERA_ICP.b10
+vendor/firmware/CAMERA_ICP.b11
+vendor/firmware/CAMERA_ICP.b12
+vendor/firmware/CAMERA_ICP.b13
+vendor/firmware/CAMERA_ICP.b14
+vendor/firmware/CAMERA_ICP.b15
+vendor/firmware/CAMERA_ICP.b16
+vendor/firmware/CAMERA_ICP.b17
+vendor/firmware/CAMERA_ICP.b18
+vendor/firmware/CAMERA_ICP.b19
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/CAMERA_ICP_170.elf
 vendor/lib64/bm4a68v08s12n52.bin
 vendor/lib64/bm4a68v08s12n53.bin
 vendor/lib64/bm4a73v08s12n02.bin
@@ -651,28 +673,6 @@ vendor/lib64/bm4a73v08s12n59.bin
 vendor/lib64/bm4a73v08s12n60.bin
 vendor/lib64/bm4a73v08s12n61.bin
 vendor/lib64/bm4a73v08s12n62.bin
-vendor/firmware/CAMERA_ICP.b00
-vendor/firmware/CAMERA_ICP.b01
-vendor/firmware/CAMERA_ICP.b02
-vendor/firmware/CAMERA_ICP.b03
-vendor/firmware/CAMERA_ICP.b04
-vendor/firmware/CAMERA_ICP.b05
-vendor/firmware/CAMERA_ICP.b06
-vendor/firmware/CAMERA_ICP.b07
-vendor/firmware/CAMERA_ICP.b08
-vendor/firmware/CAMERA_ICP.b09
-vendor/firmware/CAMERA_ICP.b10
-vendor/firmware/CAMERA_ICP.b11
-vendor/firmware/CAMERA_ICP.b12
-vendor/firmware/CAMERA_ICP.b13
-vendor/firmware/CAMERA_ICP.b14
-vendor/firmware/CAMERA_ICP.b15
-vendor/firmware/CAMERA_ICP.b16
-vendor/firmware/CAMERA_ICP.b17
-vendor/firmware/CAMERA_ICP.b18
-vendor/firmware/CAMERA_ICP.b19
-vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/CAMERA_ICP_170.elf
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -1258,8 +1258,8 @@ vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig-service.xml
-vendor/lib64/libdsd2pcm.so
 vendor/lib64/libQcelp13SwCodec.so
+vendor/lib64/libdsd2pcm.so
 vendor/lib64/libmmosal_vendor.so
 vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
@@ -1487,9 +1487,9 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.ims.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.lpa.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_client.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_server.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim.xml
 vendor/etc/vintf/manifest/vendor.zte.radio-manifest-ds.xml
 vendor/etc/telephony_packages.xml
 vendor/lib64/deviceInfoServiceModuleNr.so
@@ -1629,8 +1629,8 @@ vendor/etc/init/vendor.qti.rmt_storage.rc
 # SCVE
 vendor/lib64/libFace3DTA.so
 vendor/lib64/libFace3D_hlos.so
-vendor/lib64/libface3d_dev.so
 vendor/lib64/libQ6MSFR_manager_stub.so
+vendor/lib64/libface3d_dev.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -1810,15 +1810,15 @@ vendor/firmware/vpu33_4v_unsigned.mbn
 vendor/lib64/libubwcp.so
 
 # Widevine DRM
-vendor/bin/KmInstallKeybox
 vendor/apex/com.google.android.widevine.nonupdatable.apex
+vendor/bin/KmInstallKeybox
 vendor/etc/vintf/manifest/android.hardware.drm-service.xml
-vendor/lib64/libtrustedapploader.so
 vendor/lib64/liboemcrypto.so
+vendor/lib64/libtrustedapploader.so
 
 # WiFi
-vendor/etc/init/init.vendor.wlan.rc
 vendor/bin/cnss-daemon
+vendor/etc/init/init.vendor.wlan.rc
 
 # WiFi Display
 system/framework/WfdCommon.jar
