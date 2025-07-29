@@ -125,7 +125,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.sm8650
+    android.hardware.biometrics.fingerprint-service.nubia_sm8650
 
 $(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_extension.sm8650)
 
