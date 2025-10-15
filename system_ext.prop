@@ -4,6 +4,9 @@ audio.offload.min.duration.secs=30
 # CNE
 persist.vendor.cne.feature=1
 
+# Camera 
+persist.sys.torch_str_support=false
+
 # Display
 sys.brightness.disable_gamma_conversion=true
 
