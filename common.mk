@@ -143,6 +143,23 @@ $(call soong_config_set,surfaceflinger,udfps_lib,//$(COMMON_PATH):libudfps_exten
 
 TARGET_HAS_UDFPS := true
 
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-aidl-service-qti \
+    android.hardware.gnss-aidl-impl-qti
+
+PRODUCT_PACKAGES += \
+    libbatching \
+    libgeofencing \
+    libgnss
+
+PRODUCT_PACKAGES += \
+    batching.conf \
+    gnss_antenna_info.conf \
+    gps.conf \
+    izat.conf
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
