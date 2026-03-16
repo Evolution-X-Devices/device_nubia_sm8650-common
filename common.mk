@@ -111,6 +111,8 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set_bool,camera,override_format_from_reserved,true)
 
 # Display
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
