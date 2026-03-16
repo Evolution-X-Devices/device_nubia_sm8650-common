@@ -132,9 +132,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# Dolby 
-TARGET_BUILD_DOLBY_EFFECTS := false
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
