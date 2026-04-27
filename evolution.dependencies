@@ -1,0 +1,33 @@
+[
+    {
+        "repository": "kernel_nubia_sm8650",
+        "target_path": "kernel/nubia/sm8650",
+        "branch": "bka"
+    },
+    {
+        "repository": "kernel_nubia_sm8650-modules",
+        "target_path": "kernel/nubia/sm8650-modules",
+        "branch": "bka"
+    },
+    {
+        "repository": "kernel_nubia_sm8650-devicetrees",
+        "target_path": "kernel/nubia/sm8650-devicetrees",
+        "branch": "bka"
+    },
+    {
+        "repository": "packages_apps_NubiaParts",
+        "target_path": "packages/apps/NubiaParts",
+        "branch": "bka"
+    },
+    {
+        "repository": "vendor_nubia_sm8650-common",
+        "target_path": "vendor/nubia/sm8650-common",
+        "branch": "bka"
+    },
+    {
+        "repository": "NullDebris/hardware_dolby",
+        "target_path": "hardware/dolby",
+        "remote": "github-non-los",
+        "branch": "lunaris"
+    }
+]
