@@ -9,6 +9,7 @@
 #include <inttypes.h>
 #include <log/log.h>
 
+#include <mutex>
 #include <thread>
 
 #include "aac_vibra_function.h"
@@ -17,14 +18,8 @@
 #define RICHTAP_MEDIUM_STRENGTH 89
 #define RICHTAP_STRONG_STRENGTH 99
 
-enum vibrationMode {
-    MODE_NONE,
-    MODE_TIMEOUT,
-    MODE_PREBAKED,
-    MODE_STREAM,
-};
-
-static vibrationMode sLastMode = MODE_NONE;
+static std::mutex sLock;
+static bool sGainDirty = false;
 
 namespace aidl {
 namespace android {
@@ -53,22 +48,16 @@ ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
 }
 
 ndk::ScopedAStatus Vibrator::off() {
-    bool ret = aac_vibra_looper_stopPerformHe();
-
-    if (ret) 
-        ALOGW("No HE effects to stop!");
-    
-    ret = aac_vibra_off();
-    if (ret) {
-        ALOGE("AAC off failed: %d\n", ret);
-        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
-    }
-
+    std::lock_guard<std::mutex> lock(sLock);
+    aac_vibra_looper_stopPerformHe();
+    ALOGD("Vibrator stopped!");
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
                                 const std::shared_ptr<IVibratorCallback>& callback) {
+    std::lock_guard<std::mutex> lock(sLock);
+
     int32_t ret = aac_vibra_looper_on(timeoutMs);
     if (ret < 0) {
         ALOGE("AAC on failed: %d\n", ret);
@@ -82,7 +71,6 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
         }).detach();
     }
 
-    sLastMode = MODE_TIMEOUT;
     return ndk::ScopedAStatus::ok();
 }
 
@@ -110,8 +98,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es,
                                      int32_t* _aidl_return) {
     int32_t strength;
 
-    if (effect == Effect::TICK || effect == Effect::CLICK)
-         effect = Effect::THUD;
+    if (effect == Effect::TICK || effect == Effect::CLICK) effect = Effect::THUD;
 
     if (effect < Effect::CLICK || effect > Effect::HEAVY_CLICK)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
@@ -130,9 +117,14 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es,
             return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
     }
 
-    if (sLastMode == MODE_STREAM)
-        aac_vibra_setAmplitude(0xFF);
-
+    std::lock_guard<std::mutex> lock(sLock);
+    if (sGainDirty) {
+        if (aac_vibra_setAmplitude(0xFF) == 0) {
+            sGainDirty = false;
+        } else {
+            ALOGE("Failed to restore full gain before effect");
+        }
+    }
 
 #ifdef USE_RICHTAP_EFFECT_REMAP
     auto mappedEffect = mapEffectToPrebakedId(effect);
@@ -141,8 +133,8 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es,
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
     }
 
-    ALOGD("Performing effect_id=0x%x (mapped from %d), strength=%d",
-          mappedEffect.value(), static_cast<int>(effect), strength);
+    ALOGD("Performing effect_id=0x%x (mapped from %d), strength=%d", mappedEffect.value(),
+          static_cast<int>(effect), strength);
 
     int32_t ret = aac_vibra_looper_prebaked_effect(mappedEffect.value(), strength);
 #else
@@ -161,8 +153,6 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es,
     }
 
     *_aidl_return = ret;
-
-    sLastMode = MODE_PREBAKED;
     return ndk::ScopedAStatus::ok();
 }
 
@@ -174,7 +164,11 @@ ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_retu
 }
 
 ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
+    std::lock_guard<std::mutex> lock(sLock);
+
     uint8_t tmp = (uint8_t)(amplitude * 0xff);
+
+    sGainDirty = (tmp != 0xFF);
 
     int32_t ret = aac_vibra_setAmplitude(tmp);
     if (ret) {
@@ -182,7 +176,6 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
     }
 
-    sLastMode = MODE_STREAM;
     return ndk::ScopedAStatus::ok();
 }
 
