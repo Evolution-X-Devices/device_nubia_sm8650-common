@@ -53,4 +53,8 @@
 
     <!-- The padding on the end of the statusbar -->
     <dimen name="status_bar_padding_end">-4px</dimen>
+
+    <!-- If using proximity_sensor_type, specifies a threshold value to distinguish near and
+         far break points. A sensor value less than this is considered "near". -->
+    <item name="proximity_sensor_threshold" translatable="false" format="float" type="dimen">5</item>
 </resources>
