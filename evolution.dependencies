@@ -1,0 +1,23 @@
+[
+  {
+    "repository": "kernel_nubia_sm8650",
+    "target_path": "kernel/nubia/sm8650",
+    "branch": "cnb"
+  },
+  {
+    "repository": "kernel_nubia_sm8650-devicetrees",
+    "target_path": "kernel/nubia/sm8650-devicetrees",
+    "branch": "cnb"
+  },
+  {
+    "repository": "kernel_nubia_sm8650-modules",
+    "target_path": "kernel/nubia/sm8650-modules",
+    "branch": "cnb"
+  },
+  {
+    "repository": "nukisystems/proprietary_vendor_nubia_sm8650-common",
+    "target_path": "vendor/nubia/sm8650-common",
+    "remote": "gitlab",
+    "branch": "cnb"
+  }
+]
